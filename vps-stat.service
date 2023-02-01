@@ -1,0 +1,11 @@
+# /usr/lib/systemd/system/vps-stat.service
+
+[Unit]
+Description=VPS Stat Service
+After=network.target
+[Service]
+ExecStart=/root/script/vps-stat.sh
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
