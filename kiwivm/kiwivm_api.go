@@ -1,4 +1,4 @@
-package main
+package kiwivm
 
 import (
 	"encoding/json"
@@ -13,7 +13,7 @@ const (
 	GetMethod = "GET"
 )
 
-func getServiceInfo() *GetServiceInfoResponse {
+func GetServiceInfo() *GetServiceInfoResponse {
 	getServiceInfoUrl := fmt.Sprintf(URL, os.Getenv("VM_VEID"), os.Getenv("VM_API_KEY"))
 	client := &http.Client{}
 	req, err := http.NewRequest(GetMethod, getServiceInfoUrl, nil)

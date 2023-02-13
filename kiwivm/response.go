@@ -1,4 +1,4 @@
-package main
+package kiwivm
 
 type GetServiceInfoResponse struct {
 	VMType                          string        `json:"vm_type"`
